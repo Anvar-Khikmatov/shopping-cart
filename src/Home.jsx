@@ -1,29 +1,37 @@
 import { Link, useNavigate } from 'react-router'
-import img from './assets/img.jpg'
+import { useEffect, useState } from 'react';
+import heroImg1 from './assets/1.webp'
+import heroImg2 from './assets/2.webp'
+import heroImg3 from './assets/3.webp'
+import heroImg4 from './assets/4.webp'
+import heroImg5 from './assets/5.webp'
+
 
 function Home() {
 
-  const navigate = useNavigate()
+const [current, setCurrent] = useState(0)  
+const heroImgCollection = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5]
 
-  function handleShop() {
-    navigate('/shop');
-  }
+
+useEffect(()=> {
+  let intervalId = setInterval(() => {
+    
+      setCurrent(prev => prev >= heroImgCollection.length-1 ? 0 : prev + 1)  
+    
+      
+  }, 2000);
+
+  return () => clearInterval(intervalId);
+},[])
+
+
 
   return (
-    <div className=" min-h-screen mx-40 my-16  flex flex-row">
-
-      <div className="flex flex-1  flex-col justify-center gap-8">
-        <p className='bg-amber-200 min-w-fit w-50 h-10 flex items-center justify-center rounded-3xl'>New Collection · 2026</p>
-        <h1 className="text-5xl">Discover Your Style</h1>
-        <p>Curated essentials and statement pieces for the modern wardrobe. Quality craftsmanship, timeless design. find pieces that feel unmistakably yours.</p>
-        <button className="border w-fit p-4 rounded-full bg-blue-950 text-white cursor-pointer" onClick={handleShop}>Shop Now</button>
-        <p>Free shipping on orders over $50</p>
+    <section id="hero" className='relative h-[40vh] md:h-[55vh] lg:h-[68vh]   bg-amber-950'>
+      <div className=''>
+        <img className="absolute inset-0 w-full h-full object-cover" src={heroImgCollection[current]} alt="" />
       </div>
-
-      <div className="flex flex-1">
-        <img className="w-full h-full rounded-2xl" src={img} alt="" />
-      </div>
-    </div>
+    </section>
   )
 }
 
