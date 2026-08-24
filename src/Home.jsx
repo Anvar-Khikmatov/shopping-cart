@@ -34,25 +34,26 @@ const handleNextBtn = () => {
 }
 
 
-useEffect(()=> {
-  let intervalId = setInterval(() => {
-    setCurrent(prev => prev >= heroImgCollection.length-1 ? 0 : prev + 1)  
-  }, 5000);
+// useEffect(()=> {
+//   let intervalId = setInterval(() => {
+//     setCurrent(prev => prev >= heroImgCollection.length-1 ? 0 : prev + 1)  
+//   }, 5000);
 
-  return () => clearInterval(intervalId);
-},[userInteracted]) 
+//   return () => clearInterval(intervalId);
+// },[userInteracted]) 
 
 
   return (
-    <section id="hero" className='flex items-center relative h-[40vh] md:h-[55vh] lg:h-[68vh]  bg-amber-950'>
-      <img className="absolute inset-0 w-full h-full object-cover" src={heroImgCollection[current]} alt="" />
-      <div className='h-16 w-full bg-amber-200 z-10 flex justify-between items-center px-8'>
-        <button className='flex justify-center items-center h-16 w-16 border rounded-full cursor-pointer' onClick={handlePrevBtn}>  <GrPrevious className='h-7 w-7 ' />  </button>
-        <button className='flex justify-center items-center h-16 w-16 border rounded-full cursor-pointer' onClick={handleNextBtn}>  <GrNext className='h-7 w-7' />  </button>
+    <section id="hero" className='flex items-center overflow-hidden bg-white relative h-[40vh] md:h-[55vh] lg:h-[68vh] '>
+      <img key={current} className="fade-in absolute inset-0 w-full h-full object-cover" src={heroImgCollection[current]} alt="" />
+      <div className='text-white h-16 w-full  z-1 flex justify-between items-center px-8 '>
+        <button className='flex justify-center items-center h-12 w-12 border rounded-full cursor-pointer backdrop-blur-xm bg-white/10 group hover:bg-amber-50 transition ease-in-out duration-300' onClick={handlePrevBtn}>  <GrPrevious className='h-6 w-6  group-hover:text-black' />  </button>
+        <button className='flex justify-center items-center h-12 w-12 border rounded-full cursor-pointer backdrop-blur-xm bg-white/10 group hover:bg-amber-50 transition ease-in-out duration-300' onClick={handleNextBtn}>  <GrNext className='h-6 w-6 group-hover:text-black' />  </button>
       </div>
-      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50'>
-        <h1 className='text-white text-5xl z-5 bottom-1'>{heroImgHeader[current]}</h1>
-        <p className=''></p>
+      <div key={current} className='slide-up  absolute  flex flex-col gap-4 text-white drop-shadow-lg left-30  top-1/2 -translate-y-3 z-2'>
+        <p className='text-xs border w-fit p-1 px-4 rounded-full tracking-[0.5rem]'>NEW COLLECTION</p>
+        <h1 className='font-(family-name:--font-heading) text-6xl '>{heroImgHeader[current]}</h1>
+        <p className='w-100 text-lg'> {heroImgText[current]} </p>
       </div>
     </section>
   )
