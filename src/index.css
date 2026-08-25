@@ -15,6 +15,36 @@ body{
   font-family: "Inter", sans-serif;;
 }
 
+.carousel-indicators{
+  height: 0.3rem;
+  width: 2rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.499);
+}
+
+.carousel-indicators:hover{
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.carousel-indicators.active{
+  background-color: white;
+  filter: brightness(200%);
+}
+
+@keyframes carouselGrow {
+  from {
+    transform: scale(1)
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.carousel-grow {
+  animation: carouselGrow 0.5s ease-in-out forwards
+}
+
 @keyframes slideUp {
   from {
     opacity: 0;

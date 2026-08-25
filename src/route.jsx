@@ -1,7 +1,7 @@
 import  Layout from './Layout'
-import Home from './Home'
-import Shop from './Shop'
-import Cart from './Cart'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
+import Cart from './pages/Cart'
 import { createBrowserRouter } from 'react-router-dom'
 
 const router = createBrowserRouter([
