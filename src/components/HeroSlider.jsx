@@ -43,7 +43,7 @@ function HeroSlider() {
     setUserInteracted(prev => !prev)
   }
 
-
+  
   useEffect(()=> {
     let intervalId = setInterval(() => {
       setCurrent(prev => prev >= heroImgCollection.length-1 ? 0 : prev + 1)  

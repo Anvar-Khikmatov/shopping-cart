@@ -76,3 +76,19 @@ body{
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
+
+.discover {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: grey;
+}
+
+.discover::before,
+.discover::after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: orange;
+}
