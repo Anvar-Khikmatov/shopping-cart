@@ -9,11 +9,13 @@
 :root {
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
+  --section-content-px: 4rem;
 }
 
 body{
   font-family: "Inter", sans-serif;;
 }
+
 
 .carousel-indicators{
   height: 0.3rem;
@@ -48,7 +50,7 @@ body{
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
