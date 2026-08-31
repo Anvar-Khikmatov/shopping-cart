@@ -94,3 +94,36 @@ body{
   height: 2px;
   background-color: orange;
 }
+
+.why-box{
+  height: 15rem;
+  width: 20rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgb(236, 236, 236);
+  transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-box:hover{
+  box-shadow: 0 0 15px 2px rgb(210, 210, 210);
+}
+
+.footer-links{
+  color: rgb(179, 174, 174);
+  font-size: small;
+  transition: filter 0.3s ease;
+  letter-spacing: 1.5px;
+}
+
+.footer-links:hover{
+  filter: brightness(150%);
+}
+
+.vertical-line{
+  height: 100%;
+  width: 1px;
+  border: 1px solid rgb(234, 179, 8);
+  margin-left: auto;
+}

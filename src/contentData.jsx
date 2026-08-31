@@ -3,6 +3,14 @@ import heroImg2 from './assets/2.webp'
 import heroImg3 from './assets/3.webp'
 import heroImg4 from './assets/4.webp'
 import heroImg5 from './assets/5.webp'
+import { IoDiamondOutline } from "react-icons/io5";
+import { BsSunglasses } from "react-icons/bs";
+import { SiCodemagic } from "react-icons/si";
+import { TbClover } from "react-icons/tb";
+
+
+
+
 
 export const homepageContent = {
   heroSlides: [
@@ -43,3 +51,32 @@ export const homepageContent = {
     }
   ]
 };
+
+
+export const whySectionContent = {
+  subheading: "WHY VELORA",
+  heading: "Crafted for those who see the details.",
+  descriptionBox: [
+    {
+      icon: <IoDiamondOutline />,
+      title: "Premium Craftsmanship",
+      description: "Carefully selected frames crafted with attention to detail, quality materials, and lasting comfort."
+    },
+    {
+      icon: <BsSunglasses />,
+      title: "Timeless Design",
+      description: "Elegant silhouettes that blend modern trends with classic aesthetics for every occasion."
+    },  
+    {
+      icon: <SiCodemagic />,
+      title: "Curated Collections",
+      description: "Thoughtfully chosen eyewear collections designed to help you find your perfect style."
+    },  
+    {
+      icon: <TbClover  />,
+      title: "Comfort First",
+      description: "Lightweight designs created for effortless everyday wear without compromising on style."
+    }, 
+
+  ]
+}

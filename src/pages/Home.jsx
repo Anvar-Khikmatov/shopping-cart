@@ -1,5 +1,8 @@
 import { Link } from 'react-router'
-import HeroSlider from '../components/HeroSlider'
+import HeroSlider from '../components/HeroSlider.jsx'
+import WhySection from '../components/WhySection.jsx'
+import Footer from '../components/Footer.jsx'
+import { homepageContent, whySectionContent } from '../contentData.jsx'
 import man from '../assets/maleSection.jpg'
 import woman from '../assets/womanSection.jpg'
 import sunglasses from '../assets/glass_banner.jpg'
@@ -12,13 +15,13 @@ function Home() {
 
   return (
     <>
-      <HeroSlider/>
+      <HeroSlider homepageContent={homepageContent} />
 
       {/* Category section */}
       <section className='flex flex-col py-16'>
         <div className='flex flex-col gap-4 justify-center items-center pt-6 pb-14'>
           <p className='discover text-xs tracking-[0.5rem]'> DISCOVER</p>
-          <h2 className='font-(family-name:--font-heading) text-6xl'>Shop by Category</h2>
+          <h2 className='font-(family-name:--font-heading) text-5xl'>Shop by Category</h2>
         </div> 
 
         <div className="grid grid-cols-2 grid-rows-[24rem_18rem]  gap-6 px-(--section-content-px)">
@@ -56,6 +59,9 @@ function Home() {
           </Link>
         </div>
       </section>
+
+      <WhySection whySectionContent={whySectionContent} />
+      <Footer />
     </>
   )
 }

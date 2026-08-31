@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { homepageContent } from '../contentData.js'
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 
-function HeroSlider() {
+function HeroSlider({homepageContent}) {
 
   const [current, setCurrent] = useState(0)  
   const [userInteracted, setUserInteracted] = useState(false) 
@@ -34,7 +33,6 @@ function HeroSlider() {
     return () => clearInterval(intervalId);
   },[userInteracted])
 
-console.log(homepageContent);
 
   return (
     <section id="hero" className='flex items-center overflow-hidden bg-[#949087] relative h-[40vh] md:h-[55vh] lg:h-[68vh] '>
