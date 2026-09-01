@@ -15,6 +15,7 @@
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
   --section-content-px: 4rem;
+  --section-mobile-px: 1.25rem;
 }
 
 html {
@@ -121,7 +122,6 @@ body{
 
 .footer-links{
   color: rgb(255,255,255,0.6);
-  /* font-size: */
   transition: color 0.3s ease;
   letter-spacing: 1.5px;
 }
@@ -157,4 +157,34 @@ body{
   height: 0.2rem;
   width: 1rem; 
 }
+
+.discover::before,
+.discover::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1px;
+  background-color: orange;
+}
+
+.footer-links{
+  letter-spacing: 1.2px;
+  font-size:smaller;
+}
+
+.footer-contact-links{
+  font-size: small;
+}
+
+.dot-seperator::before, .dot-seperator::after{
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  height: 3px;
+  width: 3px;
+  background-color: rgb(245, 158, 11);
+  margin: 0 0.3rem;
+}
+
 }

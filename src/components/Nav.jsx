@@ -6,7 +6,7 @@ function Nav() {
     <>
       <header>
         <div className="w-full h-15 md:h-18 xl:h-22 3xl:h-24 flex flex-col items-center justify-center bg-yellow-500">
-          <h1 className="font-(family-name:--font-heading) text-3xl xl:text-5xl 3xl:text-7xl tracking-[0.2rem]">Velora</h1>
+          <h1 className="font-(family-name:--font-heading) text-2xl xl:text-5xl 3xl:text-7xl tracking-[0.2rem]">Velora</h1>
           <p className="text-[0.5rem] xl:text-xs tracking-[0.2rem] xl:tracking-[0.5rem]">EYEWEAR</p>
         </div>
       </header>
