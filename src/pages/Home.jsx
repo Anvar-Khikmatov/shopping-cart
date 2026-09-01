@@ -28,7 +28,7 @@ function Home() {
           {/* Men Card */}
           <Link to="/shop" className="group relative rounded-3xl overflow-hidden border border-[#a8a7a2]  transition-[transform, shadow] ease-in-out duration-300 hover:-translate-y-2  hover:shadow-xl ">
             <img src={man} alt="Men's collection" className="w-full h-full object-cover transition-transform ease-in-out duration-300 group-hover:scale-105" />
-            <div className="absolute bottom-5 left-5 flex flex-col text-black">
+            <div className="absolute bottom-7 left-7 flex flex-col text-black">
               <span className="text-3xl font-(family-name:--font-heading)">Men</span>
               <span className="flex items-center gap-2 text-sm">
                 Explore <FaArrowRight className="transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
@@ -39,7 +39,7 @@ function Home() {
           {/* Women Card */}
           <Link to="/shop" className="group relative rounded-3xl overflow-hidden border border-[#a8a7a2]  transition-[transform, shadow] ease-in-out duration-300 hover:-translate-y-2  hover:shadow-xl ">
             <img src={woman} alt="Men's collection" className="w-full h-full object-cover transition-transform ease-in-out duration-300 group-hover:scale-105" />
-            <div className="absolute bottom-5 left-5 flex flex-col text-black">
+            <div className="absolute bottom-7 left-7 flex flex-col text-black">
               <span className="text-3xl font-(family-name:--font-heading)">Women</span>
               <span className="flex items-center gap-2 text-sm">
                 Explore <FaArrowRight className="transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
@@ -50,7 +50,7 @@ function Home() {
           {/* Sunglasses Card */}
           <Link to="/shop" className="col-span-2 group relative rounded-3xl overflow-hidden border border-[#a8a7a2]  transition-[transform, shadow] ease-in-out duration-300 hover:-translate-y-2  hover:shadow-xl ">
             <img src={sunglasses} alt="Men's collection" className="w-full h-full object-cover transition-transform ease-in-out duration-300 group-hover:scale-105" />
-            <div className="absolute bottom-5 left-5 flex flex-col text-black">
+            <div className="absolute bottom-5 left-7 flex flex-col text-black">
               <span className="text-3xl font-(family-name:--font-heading)">Sunglasses</span>
               <span className="flex items-center gap-2 text-sm">
                 Explore <FaArrowRight className="transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
