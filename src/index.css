@@ -189,3 +189,10 @@ body{
 }
 
 }
+
+@media (orientation: landscape) and (max-height: 500px) {
+  #hero {
+    min-height: 500px;
+    height: auto; 
+  }
+}

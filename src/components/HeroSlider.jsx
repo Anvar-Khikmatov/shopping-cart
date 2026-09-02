@@ -35,7 +35,7 @@ function HeroSlider({homepageContent}) {
 
 
   return (
-    <section id="hero" className='relative h-75 md:h-[58vh] xl:h-[70vh] flex items-center overflow-hidden bg-[#949087]'>
+    <section id="hero" className='heroSlides relative h-75 md:h-[58dvh] xl:h-[70vh] flex items-center overflow-hidden bg-[#949087]'>
       <img key={current} className="fade-in absolute inset-0 w-full h-full object-cover" src={activeSlide.image} alt={activeSlide.alt} />
       <div className='text-white h-8 xl:h-16 w-full  z-1 flex justify-between items-center px-4 md:px-6 xl:px-8 3xl:px-10'>
         <button className='flex justify-center items-center h-8 w-8 xl:h-16 xl:w-16 border rounded-full cursor-pointer backdrop-blur-xm bg-white/10 group hover:bg-amber-50 transition ease-in-out duration-300' onClick={handlePrevBtn}>  <GrPrevious className='h-4 2xl:h-6 w-4 2xl:w-6  group-hover:text-black' />  </button>
