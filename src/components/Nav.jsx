@@ -10,10 +10,10 @@ function Nav() {
           <p className="text-[0.5rem] xl:text-xs tracking-[0.2rem] xl:tracking-[0.5rem]">EYEWEAR</p>
         </div>
       </header>
-      <nav className=" h-8 md:h-10 xl:h-12 3xl:h-14 bg-black text-white text-[0.6rem] md:text-xs lg:text-sm 3xl:text-base flex gap-4 2xl:gap-6 justify-center items-center">
-        <Link to="/home">HOME</Link>
-        <Link to="/shop">SHOP</Link>
-        <Link to="/cart">CART</Link>
+      <nav className=" h-8 md:h-10 xl:h-12 3xl:h-14 bg-black text-white text-[0.6rem] md:text-xs lg:text-sm 3xl:text-base flex gap-4 2xl:gap-6 justify-center items-center  ">
+        <Link className="transition-colors duration-200 ease-in-out hover:text-amber-500" to="/home">HOME</Link>
+        <Link className="transition-colors duration-200 ease-in-out hover:text-amber-500" to="/collection">COLLECTION</Link>
+        <Link className="transition-colors duration-200 ease-in-out hover:text-amber-500" to="/cart">CART</Link>
       </nav>
     </>
   )

@@ -1,6 +1,6 @@
 import  Layout from './Layout'
 import Home from './pages/Home'
-import Shop from './pages/Shop'
+import Collection from './pages/Collection'
 import Cart from './pages/Cart'
 // import { createBrowserRouter } from 'react-router-dom'
 import { createHashRouter } from 'react-router-dom'
@@ -12,7 +12,7 @@ const router = createHashRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/home",  element: <Home /> },
-      { path: "/shop", element: <Shop /> },
+      { path: "/collection", element: <Collection /> },
       { path: "/cart", element: <Cart /> },
     ]
   }  
