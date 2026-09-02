@@ -39,7 +39,7 @@ function Footer() {
 
           {/* Contact side */}
           <div className="flex-1 xl:pl-14 border xl:border-l-amber-500 ">
-            <div className="w-full h-full flex flex-col justify-between gap-2 p-6 border bg-white/8 border-white/30 rounded-2xl">
+            <div className="w-full h-full flex flex-col justify-between gap-2 p-6 border bg-white/8 border-white/30 rounded-xl xl:rounded-2xl">
               <div className="font-(family-name:--font-heading) text-white text-xl xl:text-2xl">Ask a Velora Specialist</div>
               <div className="text-white/60 text-sm xl:text-base">Need help choosing the perfect frame? Our eyewear specialists are here to guide you.</div>
               <div className="flex flex-col w-fit text-white leading-8">
@@ -59,8 +59,8 @@ function Footer() {
           <div className="w-fit  text-white/60 text-xs xl:text-base "> <a href="https://github.com/Anvar-Khikmatov" className="flex items-center gap-3 transition-color duration-300 ease-in-out hover:text-amber-500"> <FaGithub /> Developed by Anvar Khikmatov</a> </div>
           <div className="flex  text-white/50 text-[0.5rem] md:text-[0.7rem] xl:text-xs">
             <div>© 2026 Velora. All rights reserved.</div>
-            <div className="dot-seperator"> See the world differently</div>
-            <div> Velora™ - Premium Eyewear Concept.</div>
+            <div className="hidden md:block dot-seperator"> See the world differently</div>
+            <div className="hidden md:block"> Velora™ - Premium Eyewear Concept.</div>
           </div>
         </div>
       </footer>
