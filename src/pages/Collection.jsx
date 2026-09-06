@@ -9,13 +9,13 @@ const [loading, setLoading] = useState(true)
 const [error, setError] = useState(null)
 
 
-useEffect(()=> {
+useEffect(() => {
   async function fetchData() {
     try {
       const response = await fetch("https://dummyjson.com/products/category/sunglasses")
       if(!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`)
-      }
+      } 
       const data = await response.json()
       setData(data)
       setLoading(false)
@@ -32,7 +32,6 @@ useEffect(()=> {
 
 
   return (
-    <>
       <section className="flex flex-col justify-center items-center py-12 xl:py-16 px-(--section-content-px)">
         <div className='flex flex-col  gap-2 xl:gap-4 justify-center items-center xl:pt-6 pb-6 xl:pb-14'>
           <p className='discover text-[0.6rem] xl:text-xs tracking-[0.3rem] xl:tracking-[0.5rem]'> COLLECTION</p>
@@ -67,8 +66,6 @@ useEffect(()=> {
           )) }
         </div>
       </section>
-
-    </>
   )
 }
 
