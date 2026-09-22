@@ -44,7 +44,7 @@ useEffect(() => {
           ))}
           {(!data) ? null : data.products.map((item, i) => (
             <div key={item.id} className='flex flex-col rounded xl:rounded-t-2xl'>
-              <div className='overflow-hidden rounded-2xl group relative'>
+              <div className='overflow-hidden rounded lg:rounded-2xl group relative'>
                 <Link to={`/collection/${item.id}`}>
                   <img 
                     src={item.images[0]} 
@@ -52,7 +52,7 @@ useEffect(() => {
                     className="bg-black/6 w-full cursor-pointer opacity-0 transition-[opacity, transform] duration-400 ease group-hover:scale-107"
                     onLoad={(e) => e.target.classList.replace('opacity-0', 'opacity-100')}
                   />
-                  <div className='absolute cursor-pointer rounded bottom-7 xl:bottom-3 left-1/2 -translate-1/2 bg-black text-white text-[0.50rem] md:text-xs p-2 tracking-wide transition-all duration-300 ease opacity-100 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'>
+                  <div className='absolute cursor-pointer  rounded bottom-5 xl:bottom-3 left-1/2 -translate-1/2 bg-black text-white text-[0.50rem] md:text-xs p-2 tracking-wide transition-all duration-300 ease opacity-100 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'>
                     VIEW DETAILS
                   </div>
                 </Link>

@@ -73,6 +73,21 @@ body{
 }
 
 
+@keyframes slideRight {
+  from {
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  animation: slideRight 0.8s ease forwards;
+}
+
 
 @keyframes fadeIn {
   from {
@@ -124,8 +139,9 @@ body{
   color: rgb(255,255,255,0.6);
   transition: color 0.3s ease;
   letter-spacing: 1.5px;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
 }
+
 
 .footer-links:hover{
   color: white;
