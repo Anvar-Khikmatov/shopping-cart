@@ -175,6 +175,7 @@ body{
   width: 1rem; 
 }
 
+
 .discover::before,
 .discover::after {
   content: "";
