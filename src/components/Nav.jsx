@@ -1,8 +1,12 @@
 import { Link } from "react-router"
 import { FaOpencart } from "react-icons/fa";
-
+import { useCart } from '../CartContext'
+import { useState } from "react";
 
 function Nav() {
+
+  
+  const { orderCount } = useCart()
 
   return ( 
     <>
@@ -11,7 +15,12 @@ function Nav() {
           <h1 className="font-(family-name:--font-heading) text-3xl font-semibold xl:text-5xl 3xl:text-7xl tracking-[0.2rem]">Velora</h1>
           <p className="text-[0.6rem] xl:text-xs tracking-[0.2rem] xl:tracking-[0.5rem]">EYEWEAR</p>
           <Link to="/cart">
-            <button className="absolute right-6 lg:right-11 top-1/2 -translate-y-1/2 text-lg lg:text-3xl cursor-pointer"> <FaOpencart /> </button>
+            <span className="absolute right-6 lg:right-11 top-1/2 -translate-y-1/2 text-lg lg:text-3xl cursor-pointer  ">
+              <button className="relative cursor-pointer"> 
+                <FaOpencart /> 
+                {orderCount <= 0 ? null : <span className="absolute flex items-center justify-center   -top-1 -right-1 lg:-right-2 h-3 w-3 lg:h-5 lg:w-5  rounded-full bg-black text-white text-[0.55rem] lg:text-sm"> {orderCount} </span>} 
+              </button>
+            </span>
           </Link>
         </div>
       </header>

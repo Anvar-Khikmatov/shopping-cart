@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
-import { data, useParams } from 'react-router'
+import { useParams } from 'react-router'
+import { useCart } from '../CartContext'
 
 
 function ProductDetail() {
 
   const [product, setProduct] = useState(null)
   const [currentImg, setCurrentImg] = useState(null)
-  const [orderCount, setOrderCount] = useState(0)
+  const [quantity, setQuantity] = useState(1)
+  const { storeOrderId, setStoreOrderId, setOrderCount } = useCart()
   const { id } = useParams()
   const infoRef = useRef(null)
   const imgCarouselClass = "h-23 w-23 lg:h-27 lg:w-27 cursor-pointer bg-black/8  rounded transition-all duration-300  border hover:border-amber-500"
@@ -41,13 +43,27 @@ function ProductDetail() {
   }
   
   const decreaseOrder = () => {
-    orderCount <= 0 ? setOrderCount(0) : setOrderCount(prev => prev - 1)
+    quantity <= 1 ? setQuantity(1) : setQuantity(prev => prev - 1)
   }
 
   const increaseOrder = () => {
-    setOrderCount(prev => prev + 1)
+    setQuantity(prev => prev + 1)
   }
   
+  const addOrder = () => {
+    setOrderCount(prev => prev + quantity)
+  }
+
+  const handleStoreId = () => {
+    const alreadyOrdered =  storeOrderId.some(item => item == id)   
+    if(!alreadyOrdered) setStoreOrderId(prev => [...prev, id])
+  }
+
+  const handleAddOrder = () => {
+    addOrder()
+    handleStoreId()
+  }
+
   return (
     <section className='flex justify-center items-center py-12 xl:py-16 px-(--section-mobile-px) xl:px-(--section-content-px)'>
       {!product ? null : 
@@ -91,10 +107,10 @@ function ProductDetail() {
             <p className='text-lg lg:text-2xl font-semibold'> {product.price}$ </p>
             <div className='flex h-8 gap-4'>
                 <button onClick={decreaseOrder} className='h-full w-8 cursor-pointer text-white bg-black transition-[background-color,color,translate] duration-300 ease-in-out hover:bg-amber-500 hover:text-black hover:-translate-y-0.5'>-</button>
-                <div className='h-full flex justify-center items-center font-semibold text-lg lg:text-2xl'> {orderCount} </div>
+                <div className='h-full flex justify-center items-center font-semibold text-lg lg:text-2xl'> {quantity} </div>
                 <button onClick={increaseOrder} className='h-full w-8 cursor-pointer text-white bg-black transition-[background-color,color,translate] duration-300 ease-in-out hover:bg-amber-500 hover:text-black hover:-translate-y-0.5'>+</button>
             </div>
-            <button className='w-27.5 h-8 cursor-pointer bg-black text-white transition-[background-color,color,translate] duration-300 ease-in-out hover:bg-amber-500 hover:text-black hover:-translate-y-0.5'>Add</button>
+            <button onClick={handleAddOrder} className='w-27.5 h-8 cursor-pointer bg-black text-white transition-[background-color,color,translate] duration-300 ease-in-out hover:bg-amber-500 hover:text-black hover:-translate-y-0.5'>Add</button>
           </div>
         </div>
         
